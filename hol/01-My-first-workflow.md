@@ -115,7 +115,7 @@ jobs:
   - Modify and add `[skip ci]` (not triggering the workflow):
   <img width="350" alt="image" src="https://user-images.githubusercontent.com/5276337/174110845-93d4a38a-9c8a-4336-9b6a-9089ea9a1cfd.png">
 
-  - Modify and create pull request (trigger: `pull_request`)
+  
 
 ## Summary
 
