@@ -1,5 +1,5 @@
 name: Matrix Strategy Sample
-on: push
+on: [workflow_dispatch]
 # The trigger to which the workflow will run 
 jobs:
   example_matrix:
