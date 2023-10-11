@@ -1,0 +1,16 @@
+name: Matrix Strategy Max-Parallel Sample
+# The trigger event for the workflow file to run 
+on: workflow_dispatch
+# Defines jobs to run
+jobs:
+  example_matrix:
+    strategy:
+      max-parallel: 4 # Sets the limit of jobs to run concurrently
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        version: [10, 12, 14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.version }}
