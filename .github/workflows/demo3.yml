@@ -1,0 +1,16 @@
+on: workflow_dispatch
+jobs:
+  exploring-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo " job was triggered by ${{ github.event_name}}"
+      - run: echo " job running on ${{ runner.os }}"
+      - run: echo " name of branch and repo ${{github.ref}} ${{github.repository}}"
+      - name : list files in the repo
+        run: |
+          ls $ {{ github.workspace}}
+      - run: echo "job status ${{job.status}}" 
+      - name: adding markdown
+        run: echo "### Hello world :rocket:" >> $GITHUB_STEP_SUMmARY
+    
+    
