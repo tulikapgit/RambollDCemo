@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+    - main
+    - dev/*
+    - release/*
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
